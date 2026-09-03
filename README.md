@@ -6,6 +6,9 @@ Prototype of a 2D side scroller game.
 
 * Raylib
 * Assets from https://craftpix.net/
+  * https://craftpix.net/freebies/free-spaceship-pixel-art-sprite-sheets/
+  * https://craftpix.net/freebies/free-planets-in-space-pixel-game-background-pack/
+  * https://craftpix.net/freebies/free-exclusion-zone-tileset-pixel-art/
 
 No AI used.
 

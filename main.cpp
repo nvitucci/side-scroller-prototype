@@ -1,21 +1,24 @@
 #include "raylib.h"
 
+#include "game.hpp"
+
 int main()
 {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    // Game main loop (using delta time as "time / FPS"):
+    //
+    // - Handle input
+    // - Update status
+    // - Redraw
 
-    InitWindow(screenWidth, screenHeight, "raylib basic window");
-    SetTargetFPS(60);
+    Game game;
 
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Welcome to raylib!", 200, 200, 40, DARKGRAY);
-        EndDrawing();
+    while (!game.shouldClose()) {
+        const float deltaTime = GetFrameTime();
+
+        game.HandleInput();
+        game.Update(deltaTime);
+        game.Draw();
     }
 
-    CloseWindow();
     return 0;
 }
