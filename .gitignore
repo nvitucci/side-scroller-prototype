@@ -67,3 +67,10 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# IDE
+.idea
+
+# Add Raylib libs copied into the repo (see README)
+!raylib-6.0_win64_msvc16/lib/*.dll
+!raylib-6.0_win64_msvc16/lib/*.lib
