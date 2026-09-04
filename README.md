@@ -10,7 +10,11 @@ Prototype of a 2D side scroller game.
   * https://craftpix.net/freebies/free-planets-in-space-pixel-game-background-pack/
   * https://craftpix.net/freebies/free-exclusion-zone-tileset-pixel-art/
 
-No AI used.
+**No AI used.**
+
+## Music
+
+The music is my own.
 
 ## Setup
 
@@ -19,4 +23,10 @@ Copied the relevant directories in this repo.
 
 ## Demo
 
-![sidescroller-demo.gif](sidescroller-demo.gif)
+GIF
+
+![Sidescroller demo GIF](sidescroller-demo.gif)
+
+Video (with music)
+
+[Sidescroller demo with music (video)](sidescroller-demo-music.mp4)

@@ -19,6 +19,7 @@ struct Game {
 
     Player player;
     std::vector<Rectangle> obstacles;
+    Music music;
 
     Game();
 

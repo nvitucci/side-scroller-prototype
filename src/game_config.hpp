@@ -7,7 +7,7 @@ inline constexpr int SCREEN_HEIGHT = 720;
 inline constexpr int PLAYER_WIDTH = 192;
 inline constexpr int PLAYER_HEIGHT = 192;
 
-inline constexpr float PLAYER_SPEED = 200.0f;
+inline constexpr float PLAYER_SPEED = 100.0f;
 inline constexpr float ANIMATION_SPEED = 10.0f;
 
 enum GameState {

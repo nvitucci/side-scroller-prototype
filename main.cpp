@@ -1,3 +1,6 @@
+#include <thread>
+#include <chrono>
+
 #include "raylib.h"
 
 #include "game.hpp"
@@ -11,6 +14,11 @@ int main()
     // - Redraw
 
     Game game;
+
+    // TODO: Temporary, to take video
+    // using namespace std::this_thread;     // sleep_for, sleep_until
+    // using namespace std::chrono_literals;
+    // sleep_for(20s);
 
     while (!game.shouldClose()) {
         const float deltaTime = GetFrameTime();

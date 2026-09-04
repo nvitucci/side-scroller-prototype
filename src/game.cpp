@@ -8,6 +8,19 @@ Game::Game():
     state(PLAYING), player(characterSheet)
 {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Side scroller prototype");
+
+    InitAudioDevice();              // Initialize audio device
+
+    music = LoadMusicStream("assets/music.mp3");
+
+    PlayMusicStream(music);
+
+    float pan = 0.0f;               // Default audio pan center [-1.0f..1.0f]
+    SetMusicPan(music, pan);
+
+    float volume = 0.8f;            // Default audio volume [0.0f..1.0f]
+    SetMusicVolume(music, volume);
+
     SetTargetFPS(60);
 
     characterSheet = LoadTexture("assets/spaceship_sprite.png");
@@ -15,9 +28,9 @@ Game::Game():
 
     // Layers for the background parallax effect
     bgLayers = {
-        {LoadTexture("assets/1.png"), 0.3f, {0, 0}},
-        {LoadTexture("assets/2.png"), 0.6f, {0, 0}},
-        {LoadTexture("assets/3.png"), 0.7f, {0, 0}},
+        {LoadTexture("assets/1.png"), 0.1f, {0, 0}},
+        {LoadTexture("assets/2.png"), 0.3f, {0, 0}},
+        {LoadTexture("assets/3.png"), 0.5f, {0, 0}},
         {LoadTexture("assets/4.png"), 0.8f, {0, 0}}
     };
 
@@ -43,6 +56,8 @@ void Game::CreateLevel() {
 }
 
 void Game::Update(float deltaTime) {
+    UpdateMusicStream(music);
+
     if (state != PLAYING) {
         return;
     }
@@ -50,9 +65,14 @@ void Game::Update(float deltaTime) {
     player.Update(deltaTime);
     camera.target = {player.position.x, player.position.y - 100};
 
+    // TODO: doesn't work, check logic
     if (IsKeyDown(KEY_P)) {
         state = PAUSED;
+        PauseMusicStream(music);
     }
+
+    state = PLAYING;
+    ResumeMusicStream(music);
 
     // "Move" the background layers in the opposite direction of the player,
     // to obtain a "parallax" effect
@@ -113,6 +133,10 @@ Game::~Game() {
     for (auto &layer: bgLayers) {
         UnloadTexture(layer.texture);
     }
+
+    UnloadMusicStream(music);   // Unload music stream buffers from RAM
+
+    CloseAudioDevice();         // Close audio device (music streaming is automatically stopped)
 
     CloseWindow();
 }
