@@ -29,4 +29,6 @@ GIF
 
 Video (with music)
 
-https://github.com/user-attachments/assets/85b822e1-12cc-45a1-ad07-c867e193290d
+https://github.com/user-attachments/assets/5a30f93b-88c0-4091-8dad-142d404cb83d
+
+(Note: See [this guide](https://github.com/george-hawkins/video-in-github-markdown/blob/master/embedded-examples.md) for a working video embed.)
