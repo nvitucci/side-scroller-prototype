@@ -29,4 +29,4 @@ GIF
 
 Video (with music)
 
-[![Sidescroller demo with music (video)](https://github.com/nvitucci/side-scroller-prototype/raw/refs/heads/main/video_thumbnail.jpg)](https://github.com/nvitucci/side-scroller-prototype/raw/refs/heads/main/sidescroller-demo-music.mp4)
+https://github.com/user-attachments/assets/85b822e1-12cc-45a1-ad07-c867e193290d
