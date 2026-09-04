@@ -19,4 +19,4 @@ Copied the relevant directories in this repo.
 
 ## Demo
 
-![sidescroller-demo.gif](../../sidescroller-demo.gif)
+![sidescroller-demo.gif](sidescroller-demo.gif)
