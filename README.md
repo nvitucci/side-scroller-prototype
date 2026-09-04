@@ -16,3 +16,7 @@ No AI used.
 
 Set up in Windows according to https://github.com/raysan5/raylib/wiki/Working-on-Windows#manual-setup-with-w64devkit (using the MSVC release).
 Copied the relevant directories in this repo.
+
+## Demo
+
+![sidescroller-demo.gif](../../sidescroller-demo.gif)
